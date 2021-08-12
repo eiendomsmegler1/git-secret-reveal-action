@@ -1,4 +1,4 @@
-name: eiendomsmegler1/git-secret-reveal
+name: eiendomsmegler1/git-secret-reveal-action
 description: reveal all git-secret files in a repository
 inputs:
   gpg_key:

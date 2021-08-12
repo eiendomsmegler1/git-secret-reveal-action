@@ -20,7 +20,7 @@ This action
     foo:
       ...
       steps:
-        - uses: eiendomsmegler1/git-secret-reveal@v0.0.1
+        - uses: eiendomsmegler1/git-secret-reveal-action@v0.0.1
           with:
             gpg_key: ${{ secrets.GPG_SECRET_KEY }}
         ...
