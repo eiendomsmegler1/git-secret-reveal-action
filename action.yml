@@ -1,0 +1,14 @@
+name: eiendomsmegler1/git-secret-reveal
+description: reveal all git-secret files in a repository
+inputs:
+  gpg_key:
+    description: The secret key
+    required: true
+runs:
+  using: composite
+  steps:
+    - run: |
+        sudo apt install -y git-secret gnupg
+        gpg --import  <(echo "${{inputs.gpg_key}}")
+        git secret reveal
+      shell: bash
